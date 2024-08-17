@@ -2,6 +2,16 @@
 
 set -ex
 
+# check if build/src directory exists, if not create it
+
+if [ ! -d "build" ]; then
+    mkdir build
+fi
+
+if [ ! -d "build/src" ]; then
+    mkdir build/src
+fi
+
 # iterate over all *.f files in `src` directory
 for f in src/*.f; do
     # compile it with gfortran and dump in build/ directory
