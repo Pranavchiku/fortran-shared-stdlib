@@ -1,0 +1,6 @@
+# ignore build directory
+
+build/
+*.dylib
+*.so
+main

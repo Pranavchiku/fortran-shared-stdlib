@@ -1,0 +1,8 @@
+PROGRAM MAIN
+DOUBLE PRECISION :: A( 2, 2 )
+INTEGER :: INFO
+
+A = RESHAPE( (/ 1.0d0, 2.0d0, 3.0d0, 4.0d0 /), (/ 2, 2 /) )
+CALL DLAUU2( 'U', 2, A, 2, INFO )
+PRINT *, A
+END PROGRAM
