@@ -30,7 +30,7 @@ done
 
 # for mac
 
-clang -shared -fPIC -o ./lapack_blas.dylib build/src/*.o
+gfortran -shared -fPIC -o ./lapack_blas.dylib build/src/*.o
 
 # execute main.f90
 
