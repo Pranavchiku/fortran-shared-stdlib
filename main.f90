@@ -1,8 +1,11 @@
 PROGRAM MAIN
-DOUBLE PRECISION :: A( 2, 2 )
-INTEGER :: INFO
-
-A = RESHAPE( (/ 1.0d0, 2.0d0, 3.0d0, 4.0d0 /), (/ 2, 2 /) )
-CALL DLAUU2( 'U', 2, A, 2, INFO )
-PRINT *, A
+        double precision :: A, B, C, ssmin, ssmax
+        A = 1.0
+        B = 2.0
+        C = 3.0
+        ssmin = 0.0
+        ssmax = 0.0
+        CALL DLAS2(A, B, C, ssmin, ssmax)
+        print *, "ssmin = ", ssmin
+        print *, "ssmax = ", ssmax
 END PROGRAM
